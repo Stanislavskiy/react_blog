@@ -1,24 +1,24 @@
 import React, { Component } from 'react';
 import Articles from '../ArticleList'
-import articles from '../../data/fixtures'
+import fixtures from '../../data/fixtures'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './app.scss'
 
-class App extends Component {
+class App extends PureComponent {
   state = {
     hasError: false,
     reverted: false
   }
 
   componentDidCatch(error, info) {
-    this.setState(() => {hasError: true})
+    this.setState({hasError: true})
   }
 
   render() {
-    let article_list = articles
+    let article_list = fixtures.slice()
 
     if (this.state.reverted) {
-      article_list = article_list.reverse()
+      article_list.reverse()
     }
 
     if (this.state.hasError) {
@@ -39,7 +39,7 @@ class App extends Component {
             <button className=" btn btn-light btn-lg" onClick={this.revert}>Revert</button>
           </div>
         </div>
-        <Articles article_list={article_list} />
+        <Articles articles={article_list} />
       </div>
     );
   }

@@ -1,38 +1,32 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import './article.scss';
 
-class Article extends Component {
+class Article extends PureComponent {
   constructor(props){
     super(props);
 
     this.state = {
-      isOpened: props.defaultOpen,
+      count: 0
     }
   }
 
-  componentWillReceiveProps(nextProps) {
-    if (nextProps.defaultOpen!==this.props.defaultOpen)
-      this.setState({
-        isOpened:nextProps.defaultOpen
-      })
-  }
-
   render() {
-    const {article} = this.props
-    const text = this.state.isOpened && (
+    const {article, isOpened, toggleArticle} = this.props
+    const text = isOpened && (
       <p className="card-text"> {article.text}</p>
     )
+
     return (
         <div className="Article row">
           <div className="col-10 offset-1">
             <div className="card">
-              <h3 className="card-title card-header">
+              <h3 className="card-title card-header" onClick={this.incrementCount}>
                 {article.title}
-                <button onClick={this.toggle} className="btn btn-primary float-right">Toggle</button>
-            </h3>
+                <button onClick={toggleArticle.bind(this, article.id)} className="btn btn-primary float-right">Toggle</button>
+              </h3>
               <div className="card-body">
                 {text}
-                <small className="text-secondary">{new Date(article.date).toDateString()}</small>
+                <small className="text-secondary">Published: {new Date(article.date).toDateString()}, clicks: {this.state.count}</small>
               </div>
             </div>
           </div>
@@ -40,9 +34,9 @@ class Article extends Component {
     );
   }
 
-  toggle = () => {
+  incrementCount = () => {
     this.setState({
-      isOpened: !this.state.isOpened
+      count: this.state.count + 1
     })
   }
 }
