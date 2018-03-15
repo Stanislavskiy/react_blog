@@ -4,7 +4,7 @@ import fixtures from '../../data/fixtures'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './app.scss'
 
-class App extends PureComponent {
+class App extends Component {
   state = {
     hasError: false,
     reverted: false
