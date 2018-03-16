@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import CommentList from '../CommentList'
-import './article.scss';
+import './article.css';
 
 class Article extends PureComponent {
   constructor(props){

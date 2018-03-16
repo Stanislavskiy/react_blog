@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import './comment.scss'
+import './comment.css'
 
 export default class Comment extends Component {
   render() {

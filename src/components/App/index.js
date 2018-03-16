@@ -3,8 +3,8 @@ import Articles from '../ArticleList'
 import Menu from '../Menu'
 import fixtures from '../../data/fixtures'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import '../../css/main.scss'
-import './app.scss'
+import '../../css/main.css'
+import './app.css'
 
 
 class App extends Component {
