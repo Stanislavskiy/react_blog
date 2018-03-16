@@ -1,3 +1,41 @@
+@import "../../css/main.scss";
+
+/* All */
+
 .Article {
-  margin-bottom: 25px;
+  margin-top: 10px;
+
+  & .article-info {
+    margin-right: 10px;
+  }
+
+  & button.comments {
+    margin-top: 10px;
+  }
+
+  & .title {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  & button.toggle {
+    margin: 10px;
+  }
+}
+
+/* Small */
+
+@media screen and (min-width: 767px) {
+  .Article {
+    margin-top: 25px;
+
+    & .title {
+      margin: 0px;
+    }
+
+    & button.toggle {
+      margin: 0px;
+    }
+
+  }
 }

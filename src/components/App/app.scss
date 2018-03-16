@@ -1,9 +1,24 @@
-.App ul {
-  padding: 0px;
-  margin: 0px;
-  list-style-type: none;
+.App {
+  & ul {
+    padding: 0px;
+    margin: 0px;
+    list-style-type: none;
+  }
+
+  & button.menu {
+    margin-top: 10px;
+  }
+
 }
 
 .App-nav {
   margin-bottom: 25px;
+}
+
+@media screen and (min-width: 767px) {
+  .App {
+    & button.menu {
+      margin-top: 25px;
+    }
+  }
 }

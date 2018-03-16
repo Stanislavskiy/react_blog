@@ -9,7 +9,7 @@ export default class ArticleList extends Component {
     const {articles} = this.props
     const article_elements = articles.map((article, index) =>
     <li key={article.id}>
-       <Article article={article} isOpened={this.state.openedId===article.id} toggleArticle={this.toggleArticle.bind(this, article.id)} />
+      <Article article={article} isOpened={this.state.openedId===article.id} toggleArticle={this.toggleArticle.bind(this, article.id)} />
     </li>
     )
     return (

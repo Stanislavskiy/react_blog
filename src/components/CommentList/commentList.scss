@@ -1,0 +1,10 @@
+@import "../../css/main.scss";
+
+
+.CommentList > li {
+  border-bottom: 1px solid $light-color;
+
+  &:last-child {
+    border: none;
+  }
+}

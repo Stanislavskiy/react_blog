@@ -1,0 +1,95 @@
+@import 'mixins';
+
+/*
+$accent-color: hsl(200, 23%, 55%);
+$light-color: hsl(200, 23%, 95%);
+$link-color: #009EBB;
+$dark-color: #373b44;
+*/
+
+$accent-color: #95E2E8;
+$light-color: hsl(200, 23%, 95%);
+$accent-secondary-color: #8ABBBF;
+$dark-color: #373b44;
+
+
+.text-accent {
+  color: $accent-color;
+}
+
+.text-accent-secondary {
+  color:  $accent-secondary-color;
+}
+
+.bg-accent {
+  background: $accent-color;
+}
+
+.inline-group > * {
+  margin-left: 10px;
+
+  &:first-child {
+    margin-left: 0px;
+  }
+}
+
+.btn-accent {
+  background: $accent-color;
+  color: $dark-color;
+
+  &:hover {
+    background:rgba($accent-color,0.5);
+    color: $dark-color;
+  }
+
+  &:active {
+    background:$light-color;
+  }
+}
+
+.btn-outline-accent {
+  background: transparent;
+  border: 1px solid $accent-color;
+  color: $accent-color;
+
+  &:hover {
+    color: #fff;
+    background-color: $accent-color;
+  }
+
+  &:active {
+    color: #fff;
+    background-color: rgba($accent-color,0.5);
+  }
+}
+
+.btn-small {
+  font-weight: normal;
+  font-size: 12px;
+  padding: 2px 5px 2px;
+}
+
+.btn-link {
+  color: $accent-secondary-color;
+  background: #fff;
+  padding: 3px 0px;
+  text-decoration: none;
+
+  &:focus {
+    text-decoration: none;
+  }
+
+  &:hover {
+    text-decoration: none;
+    color: rgba(#8ABBBF, 0.47)
+  }
+
+  &:active {
+    text-decoration: none;
+    color: gray;
+  }
+}
+
+.card, .card-title {
+  border-color: $light-color;
+}
