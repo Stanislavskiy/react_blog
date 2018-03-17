@@ -13,10 +13,8 @@ $dark-color: #373b44;
 .bg-accent {
   background: #95E2E8; }
 
-.inline-group > * {
+.inline-group > *:not(:first-of-type) {
   margin-left: 10px; }
-  .inline-group > *:first-child {
-    margin-left: 0px; }
 
 .btn-accent {
   background: #95E2E8;
@@ -60,7 +58,5 @@ $dark-color: #373b44;
 .card, .card-title {
   border-color: #eff3f5; }
 
-.CommentList > li {
+.CommentList > li:not(:last-of-type) {
   border-bottom: 1px solid #eff3f5; }
-  .CommentList > li:last-child {
-    border: none; }

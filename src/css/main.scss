@@ -1,4 +1,4 @@
-@import 'mixins';
+@import 'mixins.scss';
 
 /*
 $accent-color: hsl(200, 23%, 55%);
@@ -25,12 +25,8 @@ $dark-color: #373b44;
   background: $accent-color;
 }
 
-.inline-group > * {
+.inline-group > *:not(:first-of-type) {
   margin-left: 10px;
-
-  &:first-child {
-    margin-left: 0px;
-  }
 }
 
 .btn-accent {

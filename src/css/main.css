@@ -13,10 +13,8 @@ $dark-color: #373b44;
 .bg-accent {
   background: #95E2E8; }
 
-.inline-group > * {
+.inline-group > *:not(:first-of-type) {
   margin-left: 10px; }
-  .inline-group > *:first-child {
-    margin-left: 0px; }
 
 .btn-accent {
   background: #95E2E8;
