@@ -2,6 +2,10 @@ import React, {Component} from 'react'
 import './comment.css'
 
 export default class Comment extends Component {
+  propTypes: {
+    comment: React.propTypes.object
+  }
+
   render() {
     const {comment} = this.props
 

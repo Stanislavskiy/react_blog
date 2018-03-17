@@ -18,7 +18,8 @@ class App extends Component {
   }
 
   render() {
-    const article_list = (this.state.reverted && fixtures.slice().reverse()) || fixtures.slice()
+    const article_list = this.state.reverted ?
+      fixtures.slice().reverse() : fixtures.slice()
 
     if (this.state.hasError) {
       return <h5>Error</h5>
