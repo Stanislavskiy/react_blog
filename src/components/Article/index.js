@@ -29,7 +29,7 @@ export default class Article extends PureComponent {
       <div className="Article row">
         <div className="col-12 offset-0 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
           <div className="card">
-            <div className="card-title card-header bg-background-secondary">
+            <div className="card-title card-header bg-header">
               <div className="row">
                 <div className="col-12 col-md-10">
                   <h4 className="title text-secondary text-center text-md-left" onClick={this.incrementCount}>

@@ -1,6 +1,10 @@
 @import "../../css/main.scss";
 
 
-.CommentList > li:not(:last-of-type) {
-  border-bottom: 1px solid $light-color;
+.CommentList {
+    margin-top: 20px;
+
+  > li:not(:last-of-type) {
+    border-bottom: 1px solid $light-color;
+  }
 }

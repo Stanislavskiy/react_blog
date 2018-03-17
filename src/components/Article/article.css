@@ -4,37 +4,62 @@ $light-color: hsl(200, 23%, 95%);
 $link-color: #009EBB;
 $dark-color: #373b44;
 */
+/*
+$background-color: hsl(184, 64%, 98%);
+$background-secondary-color: rgba(#000, 0.00);
+$accent-color: hsl(184, 64%, 60%);
+$accent-secondary-color: hsl(184, 35%, 55%);
+$light-color: hsl(200, 23%, 95%);
+$dark-color: #373b44;
+*/
+body {
+  background: rgba(0, 0, 0, 0.02); }
+
 .text-accent {
-  color: #95E2E8; }
+  color: #58d2da; }
 
 .text-accent-secondary {
-  color: #8ABBBF; }
+  color: #64afb4; }
 
 .bg-accent {
-  background: #95E2E8; }
+  background: #58d2da; }
+
+.bg-header {
+  background: #fff; }
 
 .inline-group > *:not(:first-of-type) {
   margin-left: 10px; }
 
 .btn-accent {
-  background: #95E2E8;
+  background: #58d2da;
   color: #373b44; }
   .btn-accent:hover {
-    background: rgba(149, 226, 232, 0.5);
+    background: rgba(88, 210, 218, 0.5);
     color: #373b44; }
   .btn-accent:active {
     background: #eff3f5; }
 
 .btn-outline-accent {
   background: transparent;
-  border: 1px solid #95E2E8;
-  color: #95E2E8; }
+  border: 1px solid #58d2da;
+  color: #58d2da; }
   .btn-outline-accent:hover {
     color: #fff;
-    background-color: #95E2E8; }
+    background-color: #58d2da; }
   .btn-outline-accent:active {
     color: #fff;
-    background-color: rgba(149, 226, 232, 0.5); }
+    background-color: rgba(88, 210, 218, 0.5); }
+
+.btn-outline-like {
+  background: transparent;
+  border: 1px solid #ff6696;
+  color: #ff6696; }
+  .btn-outline-like:hover {
+    color: #fff;
+    background-color: #ff6696; }
+  .btn-outline-like:active {
+    color: #fff;
+    background-color: rgba(255, 102, 150, 0.5); }
 
 .btn-small {
   font-weight: normal;
@@ -42,18 +67,19 @@ $dark-color: #373b44;
   padding: 2px 5px 2px; }
 
 .btn-link {
-  color: #8ABBBF;
-  background: #fff;
+  color: #64afb4;
+  background: transparent;
   padding: 3px 0px;
   text-decoration: none; }
   .btn-link:focus {
-    text-decoration: none; }
+    text-decoration: none;
+    color: #64afb4; }
   .btn-link:hover {
     text-decoration: none;
     color: rgba(138, 187, 191, 0.47); }
   .btn-link:active {
     text-decoration: none;
-    color: gray; }
+    color: rgba(138, 187, 191, 0.8); }
 
 .card, .card-title {
   border-color: #eff3f5; }

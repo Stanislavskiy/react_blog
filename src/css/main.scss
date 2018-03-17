@@ -6,12 +6,26 @@ $light-color: hsl(200, 23%, 95%);
 $link-color: #009EBB;
 $dark-color: #373b44;
 */
-
-$accent-color: #95E2E8;
+/*
+$background-color: hsl(184, 64%, 98%);
+$background-secondary-color: rgba(#000, 0.00);
+$accent-color: hsl(184, 64%, 60%);
+$accent-secondary-color: hsl(184, 35%, 55%);
 $light-color: hsl(200, 23%, 95%);
-$accent-secondary-color: #8ABBBF;
 $dark-color: #373b44;
+*/
 
+$background-color: rgba(#000, 0.02);
+$header-color: #fff;
+$accent-color: hsl(184, 64%, 60%);
+$accent-secondary-color: hsl(184, 35%, 55%);
+$light-color: hsl(200, 23%, 95%);
+$dark-color: #373b44;
+$like-color: hsl(341, 100%, 70%);
+
+body {
+  background: $background-color;
+}
 
 .text-accent {
   color: $accent-color;
@@ -23,6 +37,10 @@ $dark-color: #373b44;
 
 .bg-accent {
   background: $accent-color;
+}
+
+.bg-header {
+  background: $header-color;
 }
 
 .inline-group > *:not(:first-of-type) {
@@ -59,6 +77,22 @@ $dark-color: #373b44;
   }
 }
 
+.btn-outline-like {
+  background: transparent;
+  border: 1px solid $like-color;
+  color: $like-color;
+
+  &:hover {
+    color: #fff;
+    background-color: $like-color;
+  }
+
+  &:active {
+    color: #fff;
+    background-color: rgba($like-color, 0.5);
+  }
+}
+
 .btn-small {
   font-weight: normal;
   font-size: 12px;
@@ -67,12 +101,13 @@ $dark-color: #373b44;
 
 .btn-link {
   color: $accent-secondary-color;
-  background: #fff;
+  background: transparent;
   padding: 3px 0px;
   text-decoration: none;
 
   &:focus {
     text-decoration: none;
+    color:$accent-secondary-color;
   }
 
   &:hover {
@@ -82,7 +117,7 @@ $dark-color: #373b44;
 
   &:active {
     text-decoration: none;
-    color: gray;
+    color: rgba(#8ABBBF, 0.8);
   }
 }
 
