@@ -1,3 +1,10 @@
+@import "../../css/main.scss";
+
 .Menu {
   padding: 10px;
+  border-bottom: 1px solid $light-color;
+
+  & .brand-name {
+    color: $background-color;
+  }
 }

@@ -15,11 +15,11 @@ $light-color: hsl(200, 23%, 95%);
 $dark-color: #373b44;
 */
 
-$background-color: rgba(#000, 0.02);
+$background-color: hsl(0, 0%, 98%);
 $header-color: #fff;
 $accent-color: hsl(184, 64%, 60%);
 $accent-secondary-color: hsl(184, 35%, 55%);
-$light-color: hsl(200, 23%, 95%);
+$light-color: hsl(0, 0%, 96%);
 $dark-color: #373b44;
 $like-color: hsl(341, 100%, 70%);
 
@@ -93,7 +93,7 @@ body {
   }
 }
 
-.btn-small {
+.btn-xs {
   font-weight: normal;
   font-size: 12px;
   padding: 2px 5px 2px;

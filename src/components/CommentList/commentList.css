@@ -13,7 +13,7 @@ $light-color: hsl(200, 23%, 95%);
 $dark-color: #373b44;
 */
 body {
-  background: rgba(0, 0, 0, 0.02); }
+  background: #fafafa; }
 
 .text-accent {
   color: #58d2da; }
@@ -37,7 +37,7 @@ body {
     background: rgba(88, 210, 218, 0.5);
     color: #373b44; }
   .btn-accent:active {
-    background: #eff3f5; }
+    background: whitesmoke; }
 
 .btn-outline-accent {
   background: transparent;
@@ -61,7 +61,7 @@ body {
     color: #fff;
     background-color: rgba(255, 102, 150, 0.5); }
 
-.btn-small {
+.btn-xs {
   font-weight: normal;
   font-size: 12px;
   padding: 2px 5px 2px; }
@@ -82,9 +82,9 @@ body {
     color: rgba(138, 187, 191, 0.8); }
 
 .card, .card-title {
-  border-color: #eff3f5; }
+  border-color: whitesmoke; }
 
 .CommentList {
   margin-top: 20px; }
   .CommentList > li:not(:last-of-type) {
-    border-bottom: 1px solid #eff3f5; }
+    border-bottom: 1px solid whitesmoke; }
