@@ -3,9 +3,17 @@ import Comment from '../Comment'
 import './commentList.css'
 
 export default class CommentList extends Component {
-
   propTypes: {
-    comments: React.propTypes.array
+    comments: React.propTypes.array,
+    isOpened: React.propTypes.bool
+  }
+
+  static defaultProps = {
+    comments: []
+  }
+
+  state = {
+    isOpened: false,
   }
 
   render() {
@@ -18,16 +26,31 @@ export default class CommentList extends Component {
         </div>
       )
 
-    const commentList = comments.map(comment =>
+    const btnCommentsText = this.state.isOpened ? "Hide comments" : "Show comments"
+    const commentList = this.state.isOpened && comments.map(comment =>
       <li key={comment.id}>
         <Comment comment={comment} />
       </li>
     )
 
     return (
-      <ul className="CommentList">
-        {commentList}
-      </ul>
+      <React.Fragment>
+        <div className="inline-group">
+          <button onClick={this.toggleComments} className="comments btn btn-outline-accent btn-xs">
+            {btnCommentsText}
+          </button>
+        </div>
+        <ul className="CommentList">
+          {commentList}
+        </ul>
+      </React.Fragment>
     )
   }
+
+  toggleComments = () => {
+    this.setState({
+      isOpened: !this.state.isOpened
+    })
+  }
+
 }

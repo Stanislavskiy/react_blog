@@ -12,18 +12,13 @@ export default class Article extends PureComponent {
 
   state = {
     count: 0,
-    commentsOpened: false
   }
 
   render() {
     const {article, isOpened, toggleArticle} = this.props
     const btnText = isOpened ? "Close" : "Read"
-    const btnCommentsText = this.state.commentsOpened ? "Hide comments" : "Show comments"
     const articleText = isOpened &&
       <p className="card-text"> {article.text}</p>
-
-    const comments = this.state.commentsOpened &&
-      <CommentList comments={article.comments} />
 
     return (
       <div className="Article row">
@@ -51,14 +46,9 @@ export default class Article extends PureComponent {
                   <b className="text-accent-secondary">Clicks:</b> {this.state.count}
                 </small>
               </div>
-              <div className="inline-group">
-                <button onClick={this.toggleComments} className="comments btn btn-outline-accent btn-small">
-                  {btnCommentsText}
-                </button>
-              </div>
               <div className="row">
                 <div className="col-12">
-                  {comments}
+                  {this.getComments()}
                 </div>
               </div>
             </div>
@@ -68,10 +58,10 @@ export default class Article extends PureComponent {
     );
   }
 
-  toggleComments = () => {
-    this.setState({
-      commentsOpened: !this.state.commentsOpened
-    })
+  getComments = () => {
+    if (!this.props.isOpened) return null
+
+    return <CommentList comments={this.props.article.comments} />
   }
 
   incrementCount = () => {
