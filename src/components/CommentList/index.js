@@ -3,11 +3,11 @@ import Comment from '../Comment'
 import './commentList.css'
 
 export default class CommentList extends Component {
-  propTypes: {
+  propTypes = {
     comments: React.propTypes.array,
     isOpened: React.propTypes.bool
   }
-
+  
   static defaultProps = {
     comments: []
   }

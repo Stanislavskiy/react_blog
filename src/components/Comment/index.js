@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import './comment.css'
 
 export default class Comment extends Component {
-  propTypes: {
+  propTypes = {
     comment: React.propTypes.object
   }
 

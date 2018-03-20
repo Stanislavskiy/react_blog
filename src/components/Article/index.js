@@ -4,7 +4,7 @@ import './article.css';
 
 export default class Article extends PureComponent {
 
-  propTypes: {
+  propTypes = {
     article: React.propTypes.object,
     isOpened: React.propTypes.bool,
     toggleArticle: React.propTypes.func
@@ -15,7 +15,11 @@ export default class Article extends PureComponent {
   }
 
   render() {
-    const {article, isOpened, toggleArticle} = this.props
+    const { 
+      article, 
+      isOpened, 
+      toggleArticle 
+    } = this.props
     const btnText = isOpened ? "Close" : "Read"
     const articleText = isOpened &&
       <p className="card-text"> {article.text}</p>
