@@ -1,9 +1,10 @@
 import React, {Component} from 'react'
+import PropTypes from 'prop-types'
 import Article from '../Article'
 
 export default class ArticleList extends Component {
-  propTypes = {
-    articles: React.propTypes.array
+  static propTypes = {
+    articles: PropTypes.array
   }
 
   state = {

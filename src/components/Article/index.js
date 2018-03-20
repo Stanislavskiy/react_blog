@@ -1,13 +1,17 @@
 import React, { PureComponent } from 'react';
+import PropTypes from 'prop-types'
 import CommentList from '../CommentList'
 import './article.css';
 
 export default class Article extends PureComponent {
-
-  propTypes = {
-    article: React.propTypes.object,
-    isOpened: React.propTypes.bool,
-    toggleArticle: React.propTypes.func
+  static propTypes = {
+    article: PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      title: PropTypes.string.isRequired,
+      text: PropTypes.string
+    }).isRequired,
+    isOpened: PropTypes.bool,
+    toggleArticle: PropTypes.func
   }
 
   state = {

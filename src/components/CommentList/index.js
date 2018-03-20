@@ -1,13 +1,13 @@
 import React, {Component} from 'react'
+import PropTypes from 'prop-types'
 import Comment from '../Comment'
 import './commentList.css'
 
 export default class CommentList extends Component {
-  propTypes = {
-    comments: React.propTypes.array,
-    isOpened: React.propTypes.bool
+  static  propTypes = {
+    comments: PropTypes.array
   }
-  
+
   static defaultProps = {
     comments: []
   }
@@ -36,7 +36,8 @@ export default class CommentList extends Component {
     return (
       <React.Fragment>
         <div className="inline-group">
-          <button onClick={this.toggleComments} className="comments btn btn-outline-accent btn-xs">
+          <button onClick={this.toggleComments} 
+          className="comments btn btn-outline-accent btn-xs">
             {btnCommentsText}
           </button>
         </div>
