@@ -76,22 +76,6 @@ body {
   }
 }
 
-.btn-outline-like {
-  background: transparent;
-  border: 1px solid $like-color;
-  color: $like-color;
-
-  &:hover {
-    color: #fff;
-    background-color: $like-color;
-  }
-
-  &:active {
-    color: #fff;
-    background-color: rgba($like-color, 0.5);
-  }
-}
-
 .btn-xs {
   font-weight: normal;
   font-size: 12px;

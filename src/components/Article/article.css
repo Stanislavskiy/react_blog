@@ -50,17 +50,6 @@ body {
     color: #fff;
     background-color: rgba(88, 210, 218, 0.5); }
 
-.btn-outline-like {
-  background: transparent;
-  border: 1px solid #ff6696;
-  color: #ff6696; }
-  .btn-outline-like:hover {
-    color: #fff;
-    background-color: #ff6696; }
-  .btn-outline-like:active {
-    color: #fff;
-    background-color: rgba(255, 102, 150, 0.5); }
-
 .btn-xs {
   font-weight: normal;
   font-size: 12px;
