@@ -2,8 +2,10 @@ import React, {Component} from 'react'
 import PropTypes from 'prop-types'
 import Comment from '../Comment'
 import './commentList.css'
+import toggleOpen from '../../decorators/toggleOpen'
 
-export default class CommentList extends Component {
+
+class CommentList extends Component {
   static  propTypes = {
     comments: PropTypes.array
   }
@@ -12,12 +14,8 @@ export default class CommentList extends Component {
     comments: []
   }
 
-  state = {
-    isOpened: false,
-  }
-
   render() {
-    const {comments} = this.props
+    const {comments, isOpened, toggleOpen} = this.props
 
     if (!comments)
       return (
@@ -26,8 +24,8 @@ export default class CommentList extends Component {
         </div>
       )
 
-    const btnCommentsText = this.state.isOpened ? "Hide comments" : "Show comments"
-    const commentList = this.state.isOpened && comments.map(comment =>
+    const btnCommentsText = isOpened ? "Hide comments" : "Show comments"
+    const commentList = isOpened && comments.map(comment =>
       <li key={comment.id}>
         <Comment comment={comment} />
       </li>
@@ -36,7 +34,7 @@ export default class CommentList extends Component {
     return (
       <React.Fragment>
         <div className="inline-group">
-          <button onClick={this.toggleComments} 
+          <button onClick={toggleOpen} 
           className="comments btn btn-outline-accent btn-xs">
             {btnCommentsText}
           </button>
@@ -47,11 +45,6 @@ export default class CommentList extends Component {
       </React.Fragment>
     )
   }
-
-  toggleComments = () => {
-    this.setState({
-      isOpened: !this.state.isOpened
-    })
-  }
-
 }
+
+export default toggleOpen(CommentList)
