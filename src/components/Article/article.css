@@ -13,7 +13,7 @@ $light-color: hsl(200, 23%, 95%);
 $dark-color: #373b44;
 */
 body {
-  background: #f0f9ff; }
+  background: #fff; }
 
 .text-accent {
   color: #58d2da; }
@@ -25,7 +25,7 @@ body {
   background: #58d2da; }
 
 .bg-header {
-  background: #fff; }
+  background: rgba(255, 255, 255, 0.89); }
 
 .inline-group > *:not(:first-of-type) {
   margin-left: 10px; }
