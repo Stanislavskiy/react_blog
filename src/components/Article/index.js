@@ -36,7 +36,7 @@ export default class Article extends PureComponent {
               <div className="row">
                 <div className="col-12 col-md-10">
                   <h4 className="title text-secondary text-center text-md-left" onClick={this.incrementCount}>
-                    {article.title}
+                    {article.title} 
                   </h4>
                 </div>
                 <div className="col-12 col-md-2 text-center">

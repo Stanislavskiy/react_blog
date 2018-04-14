@@ -7,7 +7,11 @@ import toggleOpen from '../../decorators/toggleOpen'
 
 class CommentList extends Component {
   static  propTypes = {
-    comments: PropTypes.array
+    comments: PropTypes.array,
+
+    //from toggleOpen
+    toggleOpen: PropTypes.func,
+    isOpened: PropTypes.bool
   }
 
   static defaultProps = {
